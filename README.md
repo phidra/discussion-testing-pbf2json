@@ -2,9 +2,15 @@
 
 The only purpose of this repo is to support discussions about how to test a conversion program.
 
+The converter in this repo :
+
+- reads an input file containing OSM data
+- parses the OSM ways, particularly the extremities of the ways
+- dumps those extremities in an `output.json` file
+
 # How to get data
 
-The required format is [osm.pbf](https://wiki.openstreetmap.org/wiki/PBF_Format).
+The required input format is [osm.pbf](https://wiki.openstreetmap.org/wiki/PBF_Format).
 
 You can download it directly as `.osm.pbf`, for instance from geofabrifk ([example](https://download.geofabrik.de/europe/france.html)).
 
@@ -19,7 +25,7 @@ A very small sample data file is included in the repo in the `data` folder.
 
 # How to build / run
 
-The repo uses conan to get rapidjson dependency, and assumes libosmium to be installed system-wide.
+The code builds with **cmake**, depends on [libosmium](https://osmcode.org/libosmium/) and [rapidjson](https://rapidjson.org/), it uses conan to get rapidjson dependency, and assumes libosmium to be installed system-wide.
 
 ```
 ./build.sh
