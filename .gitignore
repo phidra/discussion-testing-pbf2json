@@ -1,0 +1,7 @@
+*.swp
+tags
+.clangd
+*NOGIT*
+
+output.json
+_build/
